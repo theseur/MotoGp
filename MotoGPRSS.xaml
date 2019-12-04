@@ -1,0 +1,17 @@
+﻿<Window x:Class="MotoGPWeb1.MotoGPRSS"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MotoGPWeb1"
+        mc:Ignorable="d"
+        Title="MotoGPRSS" Height="450" Width="500"
+         WindowStartupLocation="Manual" 
+    Left="810" Top="0">
+    <Grid>
+        <TextBox x:Name="RSS"  HorizontalAlignment="Left" Height="352" Margin="33,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="426" RenderTransformOrigin="0.5,0.5"/>
+        <!--<WebBrowser x:Name="Webes" HorizontalAlignment="Left" Height="68" Margin="80,229,0,0" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.531,-0.227"/>-->
+        
+
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MotoGPDBLinqToSQLClass">
+  <DataContextMoniker Name="/MotoGPDBLinqToSQLClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4de9601c-7ad5-4dd5-b477-bdeddbb7289b" absoluteBounds="4.75, 1.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MotoGPDBLinqToSQLClassDataContext/MotoGPDB4" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e5bbf49-43b9-446b-81d9-d6d4734fb72d" absoluteBounds="4.765, 1.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

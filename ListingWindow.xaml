@@ -1,0 +1,82 @@
+﻿<Window x:Class="MotoGPWeb1.ListingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MotoGPWeb1"
+        xmlns:sdk="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        Title="ListingWindow" Height="650" Width="800"
+        WindowStartupLocation="Manual" 
+    Left="0" Top="0">
+    <Grid>
+        <DataGrid Name="Listing" HorizontalAlignment="Left" Height="100" Margin="414,41,0,0" VerticalAlignment="Top" Width="335" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Team's&#x0a;name" Binding="{Binding TeamName}" />
+                <DataGridTextColumn Header="Year of&#x0a;Foaundation" Binding="{Binding YearOfFound}" />
+                <DataGridTextColumn Header="Won&#x0a;Championships" Binding="{Binding WonChamps}" />
+                <sdk:DataGridTemplateColumn Width="SizeToHeader" IsReadOnly="True" Header="Fee">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Path=Fee, Mode=OneWay}"   Margin="2,0,2,0" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <!--<DataGridTextColumn Header="Fee" Binding="{Binding Fee, Mode=TwoWay}" />-->
+                <!--<DataGridTemplateColumn Header="Year of Foaundation">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <DatePicker SelectedDate="{Binding Birthday}" BorderThickness="0" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>-->
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddingToPage" Click="AddingtoPage" Content="Go to Adding page" HorizontalAlignment="Left" Margin="68,40,0,0" VerticalAlignment="Top" Width="118"/>
+        <Button Content="Go to Main page" Click="Mainpage" HorizontalAlignment="Left" Margin="68,100,0,0" VerticalAlignment="Top" Width="118"/>
+        <Button x:Name="Max" Content="Max" Click="MaxWonChamp" HorizontalAlignment="Left" Margin="68,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.56,-1.55"/>
+        <TextBox x:Name="WhereMaxChamp" HorizontalAlignment="Left" Height="23" Margin="414,150,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="335" TextChanged="WhereMaxChamp_TextChanged"/>
+        <Button x:Name="MinChamp" Content="Try>1" Click="WonMinChamp" HorizontalAlignment="Left" Margin="68,190,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.507,-1.35"/>
+        <TextBox x:Name="MinWonChamp" HorizontalAlignment="Left" Height="105" Margin="385,350,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="335" />
+        <!--Button Content="Try" Click="TryButton" HorizontalAlignment="Left" Margin="68,203,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.56,-4.6"/>
+        <DataGrid x:Name="dataGridView1" HorizontalAlignment="Left" Height="90" Margin="414,287,0,0" VerticalAlignment="Top" Width="305"/>-->
+        <TextBlock x:Name="Year" HorizontalAlignment="Left" Margin="71,245,0,0" TextWrapping="Wrap" Text="Year" VerticalAlignment="Top" RenderTransformOrigin="0.545,1.938" FontSize="14" />
+        <TextBlock x:Name="WonCh" HorizontalAlignment="Left" Margin="71,270,0,0" TextWrapping="Wrap" Text="Won" VerticalAlignment="Top" RenderTransformOrigin="0.48,-0.438" FontSize="14" Width="37" />
+        <TextBlock x:Name="Fee" HorizontalAlignment="Left" Margin="71,300,0,0" TextWrapping="Wrap" Text="Fee" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.455,1.875" FontSize="14" />
+        <CheckBox x:Name="Year1"  HorizontalAlignment="Left" Margin="127,245,0,0" VerticalAlignment="Top" Height="18" Width="20" RenderTransformOrigin="-3.15,0.5"  />
+        <CheckBox x:Name="Won1"  HorizontalAlignment="Left" Margin="127,270,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.438,-0.6"/>
+        <CheckBox x:Name="Fee1"  HorizontalAlignment="Left" Margin="127,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.938,0.733"/>
+        <Button x:Name="Modify" Click="Modyfying" Content="Go to Modifying page" HorizontalAlignment="Left" Margin="68,70,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBlock x:Name="T" HorizontalAlignment="Left" Margin="68,220,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" RenderTransformOrigin="0.656,-0.938" FontSize="14" />
+        <CheckBox x:Name="TeaMNAme"  HorizontalAlignment="Left" Margin="127,220,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="68,334,0,0" TextWrapping="Wrap" Text="Searching" 
+                   Background="Black" Foreground="LawnGreen" VerticalAlignment="Top" Width="97" Height="30" FontSize="20" />
+
+        <TextBlock HorizontalAlignment="Left" Margin="190,220,0,0" TextWrapping="Wrap" Text="Name of the team" VerticalAlignment="Top" Height="22" Width="115" FontSize="14"/>
+        <TextBox Name="TeamsName" HorizontalAlignment="Left" Height="23" Margin="328,220,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190"  FontSize="14" RenderTransformOrigin="0.498,-0.348"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="190,270,0,0" TextWrapping="Wrap" Text="Won Championships" VerticalAlignment="Top" Height="22" Width="134" FontSize="14" RenderTransformOrigin="0.522,-1.045"/>
+        <TextBlock HorizontalAlignment="Left" Margin="328,270,0,0" TextWrapping="Wrap" Text="From" VerticalAlignment="Top" Height="22" Width="43" FontSize="14"/>
+        <TextBox Name="BeginningNum" HorizontalAlignment="Left" Height="23" Margin="376,270,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-0.379,0.565"/>
+        <TextBlock HorizontalAlignment="Left" Margin="429,270,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top"  Height="22" Width="18" FontSize="14" RenderTransformOrigin="1.5,0.455"/>
+        <TextBox Name="MaxNum" HorizontalAlignment="Left" Height="21" Margin="455,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.571,0.667"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="190,245,0,0" TextWrapping="Wrap" Text="Year of Foundation" VerticalAlignment="Top" FontSize="14" Width="134"/>
+        <TextBlock HorizontalAlignment="Left" Margin="328,245,0,0" TextWrapping="Wrap" Text="From" VerticalAlignment="Top" Height="22" Width="43" FontSize="14" RenderTransformOrigin="2.674,-3.091"/>
+        <TextBox Name="BeginningNum1" HorizontalAlignment="Left" Height="23" Margin="372,245,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="52" RenderTransformOrigin="-0.379,0.565" />
+        <TextBlock HorizontalAlignment="Left" Margin="429,245,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top"  Height="22" Width="21" FontSize="14"/>
+        <TextBox Name="MaxNumYear" HorizontalAlignment="Left" Height="21" Margin="455,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="63" RenderTransformOrigin="2.46,-3.952"/>
+
+        <TextBlock x:Name="Fee2" HorizontalAlignment="Left" Margin="190,300,0,0" TextWrapping="Wrap" Text="Fee" VerticalAlignment="Top" Width="34" FontSize="14" RenderTransformOrigin="5.265,-6.947" />
+        <CheckBox x:Name="Fee3"  HorizontalAlignment="Left" Margin="328,300,0,0" VerticalAlignment="Top" RenderTransformOrigin="9.5,-4.933"/>
+        <TextBlock x:Name="Or" HorizontalAlignment="Left" Margin="563,190,0,0" TextWrapping="Wrap" Text="Or" VerticalAlignment="Top" Width="17" FontSize="14" />
+        <TextBlock HorizontalAlignment="Left" Margin="666,190,0,0" TextWrapping="Wrap" Text="And" VerticalAlignment="Top" Width="29" FontSize="14" />
+
+
+
+
+
+    </Grid>
+</Window>

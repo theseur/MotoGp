@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CreateMotoGPDb4" Class="MotoGPDBLinqToSQLClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PF2U8LG;Initial Catalog=CreateMotoGPDb4;Integrated Security=True" SettingsObjectName="MotoGPWeb1.Properties.Settings" SettingsPropertyName="CreateMotoGPDb4ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MotoGPDB4" Member="MotoGPDB4s">
+    <Type Name="MotoGPDB4">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YearOfFound" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WonChamps" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fee" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
